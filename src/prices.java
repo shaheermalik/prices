@@ -11,16 +11,17 @@ public class prices {
         double r = w2 / p2 - w1 / p1;
         String s = "";
 
-        if (r < 0.0000001) { // comparing double to zero is not reliable, using
-           // minimum threshold instead
+        if (r ==0 ) {
             System.out.println("Two packages have the same price.");
             System.exit(0);
         }
 
         if (r > 0) {
             s = "Package 2";
-        } else {
+
+        } else if(r < 0 ) {
             s = "Package 1";
+
         }
 
         System.out.println(s + " has better price.");
